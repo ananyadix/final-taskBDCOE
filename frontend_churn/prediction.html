@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prediction</title>
+    <style>
+    .text-center {
+        text-align: center!important;
+    }
+    .py-5 {
+        padding-top: 3rem!important;
+        padding-bottom: 3rem!important;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+   }
+    input[type=submit] {
+      background-color: #f268c6;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+      }
+  .form-control,.form-select,.dt{
+  width:450px;
+  padding:20px;
+  margin-bottom: 20px;
+  }
+  .churn {
+  max-width: 500px;
+  margin: auto;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="py-5 text-center">
+        <h2 style="color: hotpink;">Come and predict your customer churn with us</h2>
+        <p>Please fill the given form</p>
+    </div>
+    <form class="churn">
+      <div>
+        <input type="text" class="form-control" id="age" name="age" placeholder="Enter customer age">
+        <br>
+        <input type="text" class="form-control" id="last login" name="last login"  placeholder="Enter day since last login">
+      <br>
+        <input type="text" class="form-control" id="avg time" name="avg time" placeholder="Enter average time spent">
+        <br>
+        <input type="text" class="form-control" id="transaction" name="transaction" placeholder="Enter average transaction value">
+      <br>
+        <input type="text" class="form-control" id="points" name="points" placeholder="Enter points in wallet">
+      <br>
+        <input type="text" class="form-control" id="churn" name="churn"  placeholder="Enter churn risk score">
+      <br>
+        <select class="form-select" id="feedback" name="feedback" aria-label="Default select example">
+          <option selected value="unknown">What is customer feedback</option>
+          <option value="Products always in Stock">Products always in Stock</option>
+          <option value="Quality Customer Care">Quality Customer Care</option>
+          <option value="Poor Website">Poor Website</option>
+          <option value="No reason specified">No reason specified</option>
+          <option value="Poor Product Quality">Poor Product Quality</option>
+          <option value="Poor Customer Service">Poor Customer Service</option>
+          <option value="Too many ads">Too many ads</option>
+        </select>
+        <br>
+        <select class="form-select" id="gender" name="gender" aria-label="Default select example">
+          <option selected value="unknown">Select Gender</option>
+          <option value="F">Female</option>
+          <option value="M">Male</option>
+        </select>
+      <br>
+      <div>
+        <select class="form-select" id="region" name="region" aria-label="Default select example">
+          <option selected value="unknown">Select region category</option>
+          <option value="Village">Village</option>
+          <option value="City">City</option>
+          <option value="Town">Town</option>
+        </select>
+      <br>
+        <select class="form-select" id="membership" name="membership" aria-label="Default select example">
+          <option selected>Select membership category</option>
+          <option value="Gold Membership">Gold</option>
+          <option value="Silver Membership">Silver</option>
+          <option value="Platinum Membership">Platinum</option>
+          <option value="Basic Membership">Basic</option>
+          <option value="No Membership">Nill</option>
+        </select>
+      <br>
+        <select class="form-select" name="preference" id="preference" aria-label="Default select example">
+          <option selected>Select offer preference</option>
+          <option value="Gift Vouchers/Coupons">Gift vouchers</option>
+          <option value="Credit/Debit Card Offers">Card offers</option>
+          <option value="Without Offers">Nill</option>
+        </select>
+      <br>
+        <select class="form-select" id="reference" name="reference" aria-label="Default select example">
+          <option selected value="unknown">Has customer came through reference</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      <br>
+        <select class="form-select" id="medium" name="madium" aria-label="Default select example">
+          <option selected value="unknown">Select medium of operation</option>
+          <option value="Desktop">Desktop</option>
+          <option value="Smartphone">Smartphone</option>
+          <option value="Both">Both</option>
+        </select>
+      <br>
+        <select class="form-select" id="internet" name="internet" aria-label="Default select example">
+          <option selected>Select internet option</option>
+          <option value="Wi-Fi">Wi-Fi</option>
+          <option value="Mobile_Data">Mobile Data</option>
+          <option value="Fiber_Optic">Fiber Optic</option>
+        </select>
+      <br>
+        <select class="form-select" id="discount" name="discount" aria-label="Default select example">
+          <option selected value=""unknown>Does customer takes special discount</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      <br>
+        <select class="form-select" id="complaint" name="complaint" aria-label="Default select example">
+          <option selected value="unknown">Does customer have any pending complaint</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      <br>
+        <label for="time">Enter last visit time</label>
+        <input type="time" id="time" name="time" class="dt">
+        <label>Joining Date:</label>
+        <input type="date" id="date" class="dt">        
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
