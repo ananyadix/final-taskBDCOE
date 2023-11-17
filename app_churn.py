@@ -9,7 +9,7 @@ def home():
     return render_template("web_page_churn.html")
 @app.route("/prediction",methods=['POST','GET'])
 def prediction():
-    if request.method==["POST"]:
+    if request.method=="POST":
         age=int(request.form['age'])
         joining_date=request.form['date']
         last_visit_time =request.form['time']
