@@ -49,7 +49,9 @@
         <h2 style="color: hotpink;">Come and predict your customer churn with us</h2>
         <p>Please fill the given form</p>
     </div>
-    <form class="churn">
+    <h1>Churn Prediction Result</h1>
+    <p>{{ prediction_text }}</p>
+    <form class="churn" action="/prediction" method="POST">
       <div>
         <input type="text" class="form-control" id="age" name="age" placeholder="Enter customer age">
         <br>
@@ -94,6 +96,7 @@
           <option value="Silver Membership">Silver</option>
           <option value="Platinum Membership">Platinum</option>
           <option value="Basic Membership">Basic</option>
+          <option value="Premium Membership">Premium</option>
           <option value="No Membership">Nill</option>
         </select>
       <br>
@@ -110,7 +113,7 @@
           <option value="No">No</option>
         </select>
       <br>
-        <select class="form-select" id="medium" name="madium" aria-label="Default select example">
+        <select class="form-select" id="medium" name="medium" aria-label="Default select example">
           <option selected value="unknown">Select medium of operation</option>
           <option value="Desktop">Desktop</option>
           <option value="Smartphone">Smartphone</option>
@@ -137,9 +140,9 @@
         </select>
       <br>
         <label for="time">Enter last visit time</label>
-        <input type="time" id="time" name="time" class="dt">
+        <input type="text" id="time" name="time" class="form-control">
         <label>Joining Date:</label>
-        <input type="date" id="date" class="dt">        
+        <input type="date" id="date" name="date" class="form-control">        
       <br>
       <input type="submit" value="Submit">
     </form>
