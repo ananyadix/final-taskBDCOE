@@ -139,16 +139,17 @@ def prediction():
         prediction=model.predict(df)
         
         
-        return render_template("prediction.html",prediction_text="Churn score is {}".format(prediction))
+        return render_template("prediction.html",prediction_text="Churn score is {} out of 10".format(prediction))
     else:
         return render_template("prediction.html")
 
 
-@app.route("/analysis")
+@app.route("/about_us")
 def analysis():
     return render_template("churn.html")
 if __name__=="__main__":
     app.run(debug=True)
+
 
 
 
